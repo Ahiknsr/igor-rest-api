@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 from flask import g, url_for
 from flask.ext.restful import Resource, reqparse

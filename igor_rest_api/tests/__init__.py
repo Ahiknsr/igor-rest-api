@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 from flask.ext.testing import TestCase
 from flask import Flask
