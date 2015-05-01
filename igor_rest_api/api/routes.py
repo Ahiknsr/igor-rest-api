@@ -17,6 +17,7 @@ from .machines.views.permissions import (
 )
 from .auth.views import UserAPI, UsersAPI
 from .views import RootAPI
+from .testing_api.views import Testing_views , Testing_views_data
 
 
 resources = [
@@ -71,7 +72,9 @@ resources = [
                 'machine_sel_time'),
             (MachineSelRecordsAPI,
                 '/machines/<string:hostname>/sel/records',
-                'machine_sel_records')
+                'machine_sel_records'),
+            (Testing_views,'/testing_api/<string:testdata>','test'),
+            (Testing_views_data,'/testing_api','testdata')
             ]
 
 def setup(api):
