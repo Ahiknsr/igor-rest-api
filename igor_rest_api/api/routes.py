@@ -17,8 +17,10 @@ from .machines.views.permissions import (
 )
 from .auth.views import UserAPI, UsersAPI
 from .views import RootAPI
-from .testing_api.views import Testing_views , Testing_views_data
-
+from .testing_api.views import (
+        Testing_views , Testing_views_data ,
+        Create_outlet_grouping , Add_admin_outlet
+)
 
 resources = [
             (RootAPI, '/', 'root'),
@@ -74,7 +76,9 @@ resources = [
                 '/machines/<string:hostname>/sel/records',
                 'machine_sel_records'),
             (Testing_views,'/testing_api/<string:testdata>','test'),
-            (Testing_views_data,'/testing_api','testdata')
+            (Testing_views_data,'/testing_api','testdata'),
+            (Create_outlet_grouping,'/testing_api/create_outlet_grouping','outlet_grouping_create'),
+            (Add_admin_outlet , '/testing_api/add_admin_outlet','outlet_grouping_add_admin')
             ]
 
 def setup(api):
